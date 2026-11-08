@@ -88,8 +88,8 @@ function render(){
     mood(lv);
     document.getElementById("sl").textContent="Tebakanku sudah siap";
     const label={low:"Risiko rendah",mid:"Risiko sedang",high:"Risiko tinggi"}[lv];
-    let adv={low:"Gejalamu sedikit atau baru muncul. Tetap pantau ya, dan periksa kalau gejalanya bertambah atau tidak hilang.",
-      mid:"Ada beberapa gejala yang perlu dicek. Sebaiknya kamu datang ke puskesmas untuk periksa dahak.",
+    let adv={low:"Gejalamu sedikit, tetap pantau ya. dan periksa kalau bertambah atau tidak hilang.",
+      mid:"Ada beberapa gejala yang perlu dicek. Sebaiknya kamu datang ke puskesmas untuk pemeriksaan.",
       high:"Banyak gejalamu yang cocok dengan TBC. Segera periksa ke puskesmas atau fasilitas kesehatan terdekat ya."}[lv];
     if(ans[0]===2&&lv==="low")adv="Batukmu sudah lebih dari seminggu. Walau skornya rendah, tetap periksa ke puskesmas kalau batuknya bertahan 2 minggu atau lebih.";
     view.innerHTML=`<section class="bubble"><h2 data-head>Tebakanku:</h2>
