@@ -117,11 +117,6 @@ view.addEventListener("click",e=>{
   else if(b.id==="again"){ans=Q.map(()=>null);step=-1;last="";render()}
   else if(b.dataset.v!==undefined){ans[step]=+b.dataset.v;last=REACT[ans[step]][0];step++;render()}
 });
-let sc=1;try{sc=parseFloat(localStorage.getItem("scale"))||1}catch(e){}
-function setScale(v){sc=Math.min(1.5,Math.max(.9,v));document.documentElement.style.setProperty("--scale",sc);try{localStorage.setItem("scale",sc)}catch(e){}}
-setScale(sc);
-document.getElementById("lg").onclick=()=>setScale(sc+.15);
-document.getElementById("sm").onclick=()=>setScale(sc-.15);
 render();
 </script>
 </body>
